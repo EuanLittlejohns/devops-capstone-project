@@ -57,6 +57,7 @@ def create_accounts():
         jsonify(message), status.HTTP_201_CREATED, {"Location": location_url}
     )
 
+
 ######################################################################
 # LIST ALL ACCOUNTS
 ######################################################################
@@ -83,7 +84,7 @@ def read_account(id):
     """
     Reads an Account
     This endpoint will read an Account with the id that is supplied
-    """        
+    """
     app.logger.info("Request to read an Account with id: %s", id)
     check_content_type("application/json")
     account = Account.find(id)
